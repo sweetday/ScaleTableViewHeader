@@ -11,4 +11,5 @@
 ```
 实现以上两个方法就可以实现下拉放大的效果
 
-
+# Screenshots
+<img src="https://github.com/sweetday/ScaleTableViewHeader/blob/master/Screenshots/normal.PNG" width="25%" height="25%" />      <img src="https://github.com/sweetday/ScaleTableViewHeader/blob/master/Screenshots/scale.PNG" width="25%" height="25%" />
