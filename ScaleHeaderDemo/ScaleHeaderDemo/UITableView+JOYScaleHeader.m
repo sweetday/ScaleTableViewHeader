@@ -141,7 +141,7 @@ static void * ScaleTableViewHeaderContext = &ScaleTableViewHeaderContext;
 - (void)joy_setScaleHeaderCoverView:(UIView *)headerCoverView
 {
     if (self.joy_scaleTableHeaderView && headerCoverView) {
-        headerCoverView.frame = self.joy_scaleTableHeaderView.bounds;
+        headerCoverView.frame = self.joy_scaleTableHeaderView.headerImageView.frame;
         [self.joy_scaleTableHeaderView addSubview:headerCoverView];
         self.joy_scaleTableHeaderView.headerCoverView = headerCoverView;
     }
