@@ -30,8 +30,8 @@
 		9B0F1A441F60542B00EBF15B /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F1A341F60542B00EBF15B /* UIImageView+HighlightedWebCache.m */; };
 		9B0F1A451F60542B00EBF15B /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F1A361F60542B00EBF15B /* UIImageView+WebCache.m */; };
 		9B0F1A461F60542B00EBF15B /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F1A381F60542B00EBF15B /* UIView+WebCacheOperation.m */; };
-		9B0F1A491F605DFC00EBF15B /* TestFrontView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F1A481F605DFC00EBF15B /* TestFrontView.m */; };
-		9B0F1A4B1F605E1900EBF15B /* TestFrontView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0F1A4A1F605E1900EBF15B /* TestFrontView.xib */; };
+		9B0F1A4B1F605E1900EBF15B /* TestCoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B0F1A4A1F605E1900EBF15B /* TestCoverView.xib */; };
+		9B5AAA7A1F721AE90094FD4A /* TestCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5AAA791F721AE90094FD4A /* TestCoverView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,9 +99,9 @@
 		9B0F1A361F60542B00EBF15B /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		9B0F1A371F60542B00EBF15B /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		9B0F1A381F60542B00EBF15B /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
-		9B0F1A471F605DFC00EBF15B /* TestFrontView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFrontView.h; sourceTree = "<group>"; };
-		9B0F1A481F605DFC00EBF15B /* TestFrontView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFrontView.m; sourceTree = "<group>"; };
-		9B0F1A4A1F605E1900EBF15B /* TestFrontView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestFrontView.xib; sourceTree = "<group>"; };
+		9B0F1A4A1F605E1900EBF15B /* TestCoverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCoverView.xib; sourceTree = "<group>"; };
+		9B5AAA781F721AE90094FD4A /* TestCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCoverView.h; sourceTree = "<group>"; };
+		9B5AAA791F721AE90094FD4A /* TestCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCoverView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,9 +156,9 @@
 				9B0F19E91F604D4100EBF15B /* AppDelegate.m */,
 				9B0F19EB1F604D4100EBF15B /* ViewController.h */,
 				9B0F19EC1F604D4100EBF15B /* ViewController.m */,
-				9B0F1A471F605DFC00EBF15B /* TestFrontView.h */,
-				9B0F1A481F605DFC00EBF15B /* TestFrontView.m */,
-				9B0F1A4A1F605E1900EBF15B /* TestFrontView.xib */,
+				9B5AAA781F721AE90094FD4A /* TestCoverView.h */,
+				9B5AAA791F721AE90094FD4A /* TestCoverView.m */,
+				9B0F1A4A1F605E1900EBF15B /* TestCoverView.xib */,
 				9B0F19EE1F604D4100EBF15B /* Main.storyboard */,
 				9B0F1A181F604D5E00EBF15B /* UITableView+JOYScaleHeader.h */,
 				9B0F1A191F604D5E00EBF15B /* UITableView+JOYScaleHeader.m */,
@@ -344,7 +344,7 @@
 			files = (
 				9B0F19F51F604D4100EBF15B /* LaunchScreen.storyboard in Resources */,
 				9B0F19F21F604D4100EBF15B /* Assets.xcassets in Resources */,
-				9B0F1A4B1F605E1900EBF15B /* TestFrontView.xib in Resources */,
+				9B0F1A4B1F605E1900EBF15B /* TestCoverView.xib in Resources */,
 				9B0F19F01F604D4100EBF15B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,8 +380,8 @@
 				9B0F19EA1F604D4100EBF15B /* AppDelegate.m in Sources */,
 				9B0F1A3C1F60542B00EBF15B /* SDWebImageDecoder.m in Sources */,
 				9B0F1A431F60542B00EBF15B /* UIImage+MultiFormat.m in Sources */,
-				9B0F1A491F605DFC00EBF15B /* TestFrontView.m in Sources */,
 				9B0F1A3E1F60542B00EBF15B /* SDWebImageDownloaderOperation.m in Sources */,
+				9B5AAA7A1F721AE90094FD4A /* TestCoverView.m in Sources */,
 				9B0F1A1A1F604D5E00EBF15B /* UITableView+JOYScaleHeader.m in Sources */,
 				9B0F1A411F60542B00EBF15B /* UIButton+WebCache.m in Sources */,
 				9B0F1A401F60542B00EBF15B /* SDWebImagePrefetcher.m in Sources */,
@@ -626,6 +626,7 @@
 				9B0F1A111F604D4100EBF15B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B0F1A121F604D4100EBF15B /* Build configuration list for PBXNativeTarget "ScaleHeaderDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -634,6 +635,7 @@
 				9B0F1A141F604D4100EBF15B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B0F1A151F604D4100EBF15B /* Build configuration list for PBXNativeTarget "ScaleHeaderDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -642,6 +644,7 @@
 				9B0F1A171F604D4100EBF15B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

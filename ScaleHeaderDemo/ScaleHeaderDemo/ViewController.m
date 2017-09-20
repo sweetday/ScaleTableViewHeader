@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "UITableView+JOYScaleHeader.h"
-#import "TestFrontView.h"
+#import "TestCoverView.h"
 #import "SDWebImageManager.h"
 
 static NSString * const ImgUrl = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504729989612&di=570a6f79b3c88b21c7d2a06702bc5d68&imgtype=0&src=http%3A%2F%2Fup.qqya.com%2Fallimg%2F2017-p10%2F17-103120_4835.jpg";
@@ -39,8 +39,8 @@ static NSString * const ImgUrl = @"https://timgsa.baidu.com/timg?image&quality=8
     
     [self.tableView joy_setHeaderMaxScaleHeight:200];
     
-    TestFrontView *testFrontView = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(TestFrontView.class) owner:nil options:nil].lastObject;
-    [self.tableView joy_setScaleHeaderCoverView:testFrontView];
+    TestCoverView *testCoverView = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(TestCoverView.class) owner:nil options:nil].lastObject;
+    [self.tableView joy_setScaleHeaderCoverView:testCoverView];
 }
 
 
