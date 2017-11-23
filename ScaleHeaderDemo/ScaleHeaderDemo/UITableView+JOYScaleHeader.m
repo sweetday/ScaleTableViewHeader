@@ -21,7 +21,7 @@ static void * ScaleTableViewHeaderContext = &ScaleTableViewHeaderContext;
 
 @property (nonatomic, assign) CGFloat maxScaleHeight;
 
-@property (nonatomic, assign) CGFloat originTopInset;
+@property (nonatomic, assign) CGFloat originInsetTop;
 
 @property (nonatomic, assign) BOOL firstLayoutFinish;
 
@@ -50,7 +50,11 @@ static void * ScaleTableViewHeaderContext = &ScaleTableViewHeaderContext;
     if ([self.superview respondsToSelector:@selector(contentOffset)] && !self.firstLayoutFinish) {
         self.firstLayoutFinish = YES;
         UIScrollView *scrollView = (UIScrollView *)self.superview;
-        self.originTopInset = scrollView.contentInset.top;
+        if (@available(iOS 11.0, *)) {
+            self.originInsetTop = scrollView.adjustedContentInset.top;
+        } else {
+            self.originInsetTop = scrollView.contentInset.top;
+        }
         
         self.headerImageView.frame = self.bounds;
         self.headerCoverView.frame = self.bounds;
@@ -63,10 +67,10 @@ static void * ScaleTableViewHeaderContext = &ScaleTableViewHeaderContext;
         UIScrollView *scrollView = (UIScrollView *)object;
         if ([keyPath isEqualToString:NSStringFromSelector(@selector(contentOffset))]) {
             
-            if (scrollView.contentOffset.y <= -self.originTopInset) { // 下拉放大
+            if (scrollView.contentOffset.y <= -self.originInsetTop) { // 下拉放大
                 CGRect originFrame = self.headerImageView.frame;
-                originFrame.origin.y = self.originTopInset + scrollView.contentOffset.y;
-                originFrame.size.height = self.headerHeight-self.originTopInset - scrollView.contentOffset.y;
+                originFrame.origin.y = self.originInsetTop + scrollView.contentOffset.y;
+                originFrame.size.height = self.headerHeight-self.originInsetTop - scrollView.contentOffset.y;
                 originFrame.size.width = self.bounds.size.width;
                 self.headerImageView.frame = originFrame;
                 if (self.headerCoverView) {
@@ -74,14 +78,14 @@ static void * ScaleTableViewHeaderContext = &ScaleTableViewHeaderContext;
                 }
                 [self.headerImageView layoutIfNeeded];
             }
-            if (scrollView.contentOffset.y <= -self.originTopInset-(self.maxScaleHeight?:MAXFLOAT)) { // 最大下拉距离
+            if (scrollView.contentOffset.y <= -self.originInsetTop-(self.maxScaleHeight?:MAXFLOAT)) { // 最大下拉距离
                 CGPoint newOffset = [change[NSKeyValueChangeNewKey] CGPointValue];
                 CGPoint oldOffset = [change[NSKeyValueChangeOldKey] CGPointValue];
                 if (newOffset.y == oldOffset.y) {
                     return;
                 }
                 CGPoint offset = scrollView.contentOffset;
-                offset.y = -self.originTopInset-self.maxScaleHeight;
+                offset.y = -self.originInsetTop-self.maxScaleHeight;
                 scrollView.contentOffset = offset;
             }
         }
