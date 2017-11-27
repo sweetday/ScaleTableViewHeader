@@ -75,6 +75,7 @@ static void * ScaleTableViewHeaderContext = &ScaleTableViewHeaderContext;
                 self.headerImageView.frame = originFrame;
                 if (self.headerCoverView) {
                     self.headerCoverView.frame = self.headerImageView.frame;
+                    [self.headerCoverView layoutIfNeeded];
                 }
                 [self.headerImageView layoutIfNeeded];
             }
